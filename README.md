@@ -59,13 +59,14 @@ To have VSCode extension prettier auto-format `.jsx` and `.tsx`, add the followi
 > In a different terminal / command line
 
 ```
-git clone https://github.com/PatrickAlphaC/hardhat-fund-me-fcc
+git clone https://github.com/nagrarohit/hardhat-fund-me-fcc
+
 cd hardhat-fund-me-fcc
 yarn 
 yarn hardhat node
 ```
 
-> You can read more about how to use that repo from its [README.md](https://github.com/PatrickAlphaC/hardhat-fund-me-fcc/blob/main/README.md)
+> You can read more about how to use that repo from its [README.md](https://github.com/nagrarohit/hardhat-fund-me-fcc/blob/main/README.md)
 
 
 2. Add hardhat network to your metamask/wallet
