@@ -13,9 +13,7 @@ IPFS
 - [NextJS Smartcontract Lottery (Raffle) FCC](#nextjs-smartcontract-lottery-raffle-fcc)
  
   - [Requirements](#requirements)
-   
-   
-    - [Optional Gitpod](#optional-gitpod)
+
   - [Formatting in VSCode](#formatting-in-vscode)
 - [Usage](#usage)
   - [Testing](#testing)
@@ -25,7 +23,6 @@ IPFS
 - [Thank you!](#thank-you)
 
 This project is a part of the Hardhat FreeCodeCamp video.
-
  
 
 # Getting Started
@@ -41,30 +38,7 @@ This project is a part of the Hardhat FreeCodeCamp video.
   - You'll know you've installed yarn right if you can run:
     - `yarn --version` and get an output like: `x.x.x`
     - You might need to [install it with `npm`](https://classic.yarnpkg.com/lang/en/docs/install/) or `corepack`
-
-## Quickstart
-
-```
-git clone https://github.com/PatrickAlphaC/nextjs-smartcontract-lottery-fcc
-cd nextjs-smartcontract-lottery-fcc
-yarn
-yarn dev
-```
-
-## Typescript
-
-If you want to get to typescript and you cloned the javascript version, just run:
-
-```
-git checkout typescript
-```
-
-### Optional Gitpod
-
-If you can't or don't want to run and install locally, you can work with this repo in Gitpod. If you do this, you can skip the `clone this repo` part.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/PatrickAlphaC/nextjs-smartcontract-lottery-fcc)
-
+ 
 ## Formatting in VSCode
 
 To have VSCode extension prettier auto-format `.jsx` and `.tsx`, add the following to your settings.json file:
@@ -170,11 +144,5 @@ yarn lint
 
 
 # Thank you!
-
-If you appreciated this, feel free to follow me or donate!
-
-ETH/Polygon/Avalanche/etc Address: 0x9680201d9c93d65a3603d2088d125e955c73BD65
-
-[![Patrick Collins Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/PatrickAlphaC)
-[![Patrick Collins YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCn-3f8tw_E1jZvhuHatROwA)
-[![Patrick Collins Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patrickalphac/)
+ 
+ 
