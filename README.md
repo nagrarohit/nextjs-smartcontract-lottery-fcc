@@ -1,17 +1,4 @@
-  
-
-# NextJS Smartcontract Lottery (Raffle) FCC
-
-This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
-
-*[⌨️ (16:34:07) Lesson 10: NextJS Smart Contract Lottery (Full Stack / Front End)](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=59647s)*
-
-[Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
-
-![App](img/readme-app.png)
-
-[Example App here!](https://fancy-dream-3458.on.fleek.co/)
-[Example App on IPFS here!](ipfs://Qme4KacFx21y6pYuTC6veAU2usryXB3fNWqLkX3a2hMvDe)
+ 
 
 Built with ❤️ using:
 NextJS
@@ -24,10 +11,10 @@ Hardhat
 IPFS
 
 - [NextJS Smartcontract Lottery (Raffle) FCC](#nextjs-smartcontract-lottery-raffle-fcc)
-- [Getting Started](#getting-started)
+ 
   - [Requirements](#requirements)
-  - [Quickstart](#quickstart)
-  - [Typescript](#typescript)
+   
+   
     - [Optional Gitpod](#optional-gitpod)
   - [Formatting in VSCode](#formatting-in-vscode)
 - [Usage](#usage)
@@ -39,7 +26,7 @@ IPFS
 
 This project is a part of the Hardhat FreeCodeCamp video.
 
-Video coming soon...
+ 
 
 # Getting Started
 
