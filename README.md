@@ -16,7 +16,6 @@ IPFS
 
   - [Formatting in VSCode](#formatting-in-vscode)
 - [Usage](#usage)
-  - [Testing](#testing)
 - [Deploying to IPFS](#deploying-to-ipfs)
 - [Deploy to IPFS using Fleek](#deploy-to-ipfs-using-fleek)
 - [Linting](#linting)
@@ -92,13 +91,6 @@ yarn dev
 4. Go to UI and have fun!
 
 Head over to your [localhost](http://localhost:3000) and play with the lottery!
-
-
-## Testing
-
-I didn't write any front end tests 😢
-
-If you'd like to create some tests for this repo, please make a PR!
 
 # Deploying to IPFS
 
