@@ -66,9 +66,19 @@ export default function LotteryEntrance() {
     }
     useEffect(() => {
         if (isWeb3Enabled) {
-            updateUI()
+            // Check if connected to Sepolia ETH testnet
+            if (chainId !== 11155111) {
+                dispatch({
+                    type: "warning",
+                    message: "Please switch to Sepolia ETH testnet to continue.",
+                    title: "Network Alert",
+                    position: "topR",
+                })
+            } else {
+                updateUI()
+            }
         }
-    }, [isWeb3Enabled])
+    }, [isWeb3Enabled, chainId])
 
     const handlesuccess = async (tx) => {
         await tx.wait(1)
@@ -86,35 +96,47 @@ export default function LotteryEntrance() {
         })
     }
     return (
-        <div className="p-5">
-            Welcome to the Decentralized Lottery
+        <div className="p-5 min-h-screen text-center mt-16 text-lg md:text-4xl">
+            <h1 className="text-4xl font-bold mb-6">Welcome to the Decentralized BET</h1>
+            <h2 className="text-2xl font-bold mb-6">Please Use Eth Sepolia TestNet</h2>
             {raffleAddress ? (
-                <div>
-                    <div className="">
-                        <button
-                            className="bg-blue-500 hover:bg-blue-700
-                             text-white font-bold py-2 px-4  rounded ml-auto"
-                            onClick={async () => {
-                                await enterRaffle({
-                                    onSuccess: handlesuccess,
-                                    onError: (error) => console.log(error),
-                                })
-                            }}
-                            disabled={isLoading || isFetching}
-                        >
-                            {isLoading || isFetching ? (
-                                <div className="animate-spin spinner-border h-8 w-8 border-b-2 rounded-full"></div>
-                            ) : (
-                                <div>Enter Raffle</div>
-                            )}
-                        </button>
+                <div className="mt-4">
+                    <button
+                        className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900
+                text-white font-bold py-2 px-6 rounded inline-flex items-center"
+                        onClick={async () => {
+                            await enterRaffle({
+                                onSuccess: handlesuccess,
+                                onError: (error) => console.log(error),
+                            })
+                        }}
+                        disabled={isLoading || isFetching}
+                    >
+                        {isLoading || isFetching ? (
+                            <div className="animate-spin spinner-border h-5 w-5 border-b-2 rounded-full mr-2"></div>
+                        ) : (
+                            <div>Enter BET</div>
+                        )}
+                    </button>
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
+                            <p className="text-sm md:text-base">
+                                Entrance Fee for the lottery is:{" "}
+                                {ethers.utils.formatUnits(entranceFee, "ether")} ETH
+                            </p>
+                        </div>
+                        <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
+                            <p className="text-sm md:text-base">
+                                Current No. of players: {numPlayers}
+                            </p>
+                        </div>
+                        <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
+                            <p className="text-sm md:text-base">Recent Winner: {recentWinner}</p>
+                        </div>
+                        <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
+                            <p className="text-sm md:text-base">Raffle State: {raffleState}</p>
+                        </div>
                     </div>
-                    Entrance Fee for the lottery is:
-                    {ethers.utils.formatUnits(entranceFee, "ether")}
-                    ETH
-                    <p>No. of players:{numPlayers}</p>
-                    <p>Recent Winner is:{recentWinner}</p>
-                    <p>RaffleState is:{raffleState}</p>
                 </div>
             ) : (
                 <div>No Raffle address detected</div>
