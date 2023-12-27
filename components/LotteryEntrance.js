@@ -118,7 +118,7 @@ export default function LotteryEntrance() {
                             <div>Enter BET</div>
                         )}
                     </button>
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                         <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
                             <p className="text-sm md:text-base">
                                 Entrance Fee for the lottery is:{" "}
@@ -136,6 +136,23 @@ export default function LotteryEntrance() {
                         <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
                             <p className="text-sm md:text-base">Raffle State: {raffleState}</p>
                         </div>
+                        <a
+                            className="mt-8 md:mb-8"
+                            href="https://automation.chain.link/sepolia/84104590019129755347421267731198928559559093319109999067690374620939822825507"
+                        >
+                            {" "}
+                            <img
+                                src="https://chain.link/badge-automation-white"
+                                alt="automation secured with chainlink"
+                            />
+                        </a>
+                        <a className="mt-8 md:mb-8" href="https://vrf.chain.link/sepolia/8063">
+                            {" "}
+                            <img
+                                src="https://chain.link/badge-randomness-white"
+                                alt="randomness secured with chainlink"
+                            />
+                        </a>
                     </div>
                 </div>
             ) : (
